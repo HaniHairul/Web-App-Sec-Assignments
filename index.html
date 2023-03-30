@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+	<script src="js/validateForm.js"></script>
+</head>
+<body>
+
+<h1>A. Student Details</h1>
+
+
+<div class="container">
+  <form action="/action.php" method="POST" onsubmit="return validateForm()">
+  <div class="row">
+    <div class="col-25">
+      <label for="name">Name (Legal/Official):</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="name" name="name" title="No number and any special characters" pattern="^(?=.{1,40}$)[a-zA-Z]+(?:[-'\s][a-zA-Z]+)*$" required>
+    </div>
+  </div>
+  <div id="nameError" class="error"></div>
+  <div class="row">
+    <div class="col-25">
+      <label for="matricno">Matric No:</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="matricno" name="matricno" title="No alphabet and any special characters" pattern="^[0-9]{7}" required>
+    </div>
+  </div>
+  <div id="matricnoError" class="error"></div>
+  <div class="row">
+    <div class="col-25">
+      <label for="currentAddress">Current Address:</label>
+    </div>
+    <div class="col-75">
+      <textarea id="currentAddress" name="currentAddress" title="No special characters" style="height:200px" required></textarea>
+    </div>
+  </div>
+  <div id="currentAddressError" class="error"></div>
+  <div class="row">
+    <div class="col-25">
+      <label for="homeAddress">Home Address:</label>
+    </div>
+    <div class="col-75">
+      <textarea id="homeAddress" name="homeAddress" title="No special characters" style="height:200px" required></textarea>
+    </div>
+  </div>
+  <div id="homeAddressError" class="error"></div>
+  <div class="row">
+    <div class="col-25">
+      <label for="email">Email (Gmail Account):</label>
+    </div>
+    <div class="col-75">
+      <input type="email" id="email" name="email" required>
+    </div>
+  </div>
+  <div id="emailError" class="error"></div>
+  <div class="row">
+    <div class="col-25">
+      <label for="mobilePhone">Mobile Phone No:</label>
+    </div>
+    <div class="col-75">
+      <input type="tel" id="mobilePhone" name="mobilePhone" title="No alphabet and any special characters" pattern="^[0-9]{10,11}" required>
+    </div>
+  </div>
+  <div id="mobilePhoneError" class="error"></div>
+  <div class="row">
+    <div class="col-25">
+      <label for="homePhone">Home Phone No <br>(Emergency):</label>
+    </div>
+    <div class="col-75">
+      <input type="tel" id="homePhone" name="homePhone" title="No alphabet and any special characters" pattern="^[0-9]{9,10}" required>
+    </div>
+  </div>
+  <div id="homePhoneError" class="error"></div>
+  
+  <br>
+  <div class="row">
+    <input type="submit" value="Submit">
+  </div>
+  </form>
+</div>
+
+</body>
+</html>
