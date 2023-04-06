@@ -1,5 +1,6 @@
 <?php
 
+
 $nameRegex = "/^(?=.{1,40}$)[a-zA-Z]+(?:[-'\s][a-zA-Z]+)*$/";
 $currentAddressRegex = "/^[A-Za-z0-9 ]+$/";
 $homeAddressRegex = "/^[A-Za-z0-9 ]+$/";
@@ -18,31 +19,31 @@ $homePhoneError = "";
 
 if (!preg_match($nameRegex, $_POST["name"])) {
   $nameError = "Please enter a valid name that consists only letters and spaces.";
-  array_push($errors, $nameError);
+  array_push($error, $nameError);
 }
 if (!preg_match($matricnoRegex, $_POST["matricno"])) {
   $matricnoError = "Please enter a valid matric number (only 7 digits allowed).";
-  array_push($errors, $matricnoError);
+  array_push($error, $matricnoError);
 }
 if (!preg_match($currentAddressRegex, $_POST["currentAddress"])) {
   $currentAddressError = "Please enter your current address without any special characters.";
-  array_push($errors, $currentAddressError);
+  array_push($error, $currentAddressError);
 }
-if (!preg_match(homeAddress, $_POST["homeAddress"])) {
+if (!preg_match($homeAddressRegex, $_POST["homeAddress"])) {
   $homeAddressError = "Please enter your home address without any special characters.";
-  array_push($errors, $homeAddressError);
+  array_push($error, $homeAddressError);
 }
 if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) || !strpos($_POST["email"], "@gmail.com")) {
   $emailError = "Please enter a valid Gmail account.";
-  array_push($errors, $emailError);
+  array_push($error, $emailError);
 }
 if (!preg_match($mobilePhoneRegex, $_POST["mobilePhone"])) {
   $mobilePhoneError = "Please enter a valid 10/11-digit mobile phone number.";
-  array_push($errors, $mobilePhoneError);
+  array_push($error, $mobilePhoneError);
 }
 if (!preg_match($homePhoneRegex, $_POST["homePhone"])) {
   $homePhoneError = "Please enter a valid 9/10-digit home phone number.";
-  array_push($errors, $homePhoneError);
+  array_push($error, $homePhoneError);
 }
 
 if (count($error) == 0){
@@ -57,7 +58,8 @@ if (count($error) == 0){
 
 else{
     foreach ($error as $errors) {
-        echo "$errors <br>";
+      echo "$errors <br>";
+        
 }
 }
 ?>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
-	<script src="js/validateForm.js"></script>
+    <link rel="stylesheet" href="style.css">
+	<script src="validateForm.js"></script>
 </head>
 <body>
 
@@ -11,7 +11,7 @@
 
 
 <div class="container">
-  <form action="/action.php" method="POST" onsubmit="return validateForm()">
+  <form action="action.php" method="POST" onsubmit="return validateForm()">
   <div class="row">
     <div class="col-25">
       <label for="name">Name (Legal/Official):</label>
@@ -35,7 +35,7 @@
       <label for="currentAddress">Current Address:</label>
     </div>
     <div class="col-75">
-      <textarea id="currentAddress" name="currentAddress" title="No special characters" style="height:200px" required></textarea>
+      <textarea id="currentAddress" name="currentAddress"  style="height:200px" title="No special characters" pattern="^[A-Za-z0-9 ]+$" required></textarea>
     </div>
   </div>
   <div id="currentAddressError" class="error"></div>
@@ -44,7 +44,7 @@
       <label for="homeAddress">Home Address:</label>
     </div>
     <div class="col-75">
-      <textarea id="homeAddress" name="homeAddress" title="No special characters" style="height:200px" required></textarea>
+      <textarea id="homeAddress" name="homeAddress"  style="height:200px" title="No special characters" pattern="^[A-Za-z0-9 ]+$" required></textarea>
     </div>
   </div>
   <div id="homeAddressError" class="error"></div>
