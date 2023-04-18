@@ -1,9 +1,9 @@
 # Web-App-Sec-Assignment
 
-<h2>1. Index.html</h2> 
+<h2>1. index.html</h2> 
 A file that contain the student details form. It is on the client side. The user should fill in the details and need to follow the requirement.
 
-<h2>2. Style.css</h2> 
+<h2>2. style.css</h2> 
 Controls the presentation, such as the visual design and layout of the website page, which is index.html.
 
 <h2>3. validateForm.js</h2> 
@@ -26,4 +26,7 @@ A file to create a session for the user.
 
 <h2>9. logout.php</h2> 
 When the user clicks the logout button, and the session is destroyed. Then, it will redirect to the login page (login.php).
+
+<h2>9. style1.css</h2>
+Controls the presentation, such as the visual design and layout of the website page, which is register.php.
 
