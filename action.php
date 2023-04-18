@@ -1,5 +1,5 @@
 <?php
-
+include("auth_session.php");
 
 $nameRegex = "/^(?=.{1,40}$)[a-zA-Z]+(?:[-'\s][a-zA-Z]+)*$/";
 $currentAddressRegex = "/^[A-Za-z0-9 ]+$/";
@@ -47,12 +47,12 @@ if (!preg_match($homePhoneRegex, $_POST["homePhone"])) {
 }
 
 if (count($error) == 0){
-    echo "Name: " .  $_POST["name"];
-    echo "Matric No: " . $_POST["matricno"];
-    echo "Current Address: " .  $_POST["currentAddress"];
-    echo "Home Address: " . $_POST["homeAddress"];
-    echo "Email (Gmail account only): " . $_POST["email"];
-    echo "Mobile Phone No: " . $_POST["mobilePhone"];
+    echo "Name: " .  $_POST["name"]; "<br>";
+    echo "Matric No: " . $_POST["matricno"]; "<br>";
+    echo "Current Address: " .  $_POST["currentAddress"]; "<br>";
+    echo "Home Address: " . $_POST["homeAddress"] ;"<br>";
+    echo "Email (Gmail account only): " . $_POST["email"]; "<br>";
+    echo "Mobile Phone No: " . $_POST["mobilePhone"]; "<br>";
     echo "Home Phone No: " . $_POST["homePhone"];
 }
 
@@ -63,3 +63,15 @@ else{
 }
 }
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div class="form">
+        <p><a href="logout.php">Logout</a></p> 
+    </div> 
+</body>
+</html>
