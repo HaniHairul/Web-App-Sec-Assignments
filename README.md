@@ -1,9 +1,9 @@
 # Web-App-Sec-Assignment
 
 <h2>1. Index.html</h2> 
-* A file that contain the student details form. 
+- A file that contain the student details form. 
 * It is on the client side. 
-* The user should fill in the details and need to follow the requirement.
++ The user should fill in the details and need to follow the requirement.
 
 <h2>2. Style.css</h2> 
 * Controls the presentation, such as the visual design and layout of the website page, which is index.html.
