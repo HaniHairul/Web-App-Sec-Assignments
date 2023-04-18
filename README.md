@@ -27,6 +27,9 @@ A file to create a session for the user.
 <h2>9. logout.php</h2> 
 When the user clicks the logout button, and the session is destroyed. Then, it will redirect to the login page (login.php).
 
-<h2>9. style1.css</h2>
+<h2>10. style1.css</h2>
 Controls the presentation, such as the visual design and layout of the website page, which is register.php.
+
+<h2>11. admin.php</h2> 
+Where the admin can see the data from the database (register.php).
 
