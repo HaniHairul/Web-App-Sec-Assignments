@@ -1,22 +1,19 @@
 # Web-App-Sec-Assignment
 
 <h2>1. Index.html</h2> 
-- A file that contain the student details form. 
-* It is on the client side. 
-+ The user should fill in the details and need to follow the requirement.
+A file that contain the student details form. It is on the client side. The user should fill in the details and need to follow the requirement.
 
 <h2>2. Style.css</h2> 
-* Controls the presentation, such as the visual design and layout of the website page, which is index.html.
+Controls the presentation, such as the visual design and layout of the website page, which is index.html.
 
 <h2>3. validateForm.js</h2> 
-* A file that will provide error-friendly notifications.
+A file that will provide error-friendly notifications.
 
 <h2>4. action.php</h2> 
-* A file that will show the detail of the student after they submit the form. 
-* This file is on the server side.
+A file that will show the detail of the student after they submit the form. This file is on the server side.
 
 <h2>5. register.php</h2> 
-* The users will register their username, email, and password. 
+*The users will register their username, email, and password. 
 * They need to follow the requirement.
 
 <h2>6. login.php</h2> 
