@@ -35,3 +35,9 @@ Where the admin can see the data from the database (register.php).
 
 <h2>12. CSP</h2>
 CSP code is added at the meta tag in the register.php. By using "default-src", then neither the other website script nor the background image would load.
+
+<h2>13. XSS</h2>
+XSS is prevented using regex at every input text box.
+
+<h2>14. CSRF</h2>
+CSRF token is implemented at the auth_session.php. 
