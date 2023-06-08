@@ -42,9 +42,19 @@
         <input type="password" class="login-input" name="password" placeholder="Password" title="Please enter at least 8 characters in length, but no more than 16." pattern="^.{8,16}$" required>
         <input type="submit" name="submit" value="Register" class="login-button">
         <p class="link"><a href="login.php">Click to Login</a></p>
+        <input type="hidden" name="token" value="<?php echo $_SESSION['token'] ?? '' ?>">
     </form>
 <?php
     }
+    $token = filter_input(INPUT_POST, 'token', FILTER_SANITIZE_STRING);
+
+if (!$token || $token !== $_SESSION['token']) {
+    // return 405 http status code
+    header($_SERVER['SERVER_PROTOCOL'] . ' 405 Method Not Allowed');
+    exit;
+} else {
+    // process the form
+}
 ?>
 </body>
 </html>
